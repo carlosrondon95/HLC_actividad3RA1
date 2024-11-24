@@ -1,0 +1,159 @@
+<!-- Carlos Rondón Pérez / RA1, Actividad 3: Lista de tareas interactiva. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de tareas</title>
+    <style>
+      body {
+        background-color: #121212;
+        color: #eee;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      /* Estilo básico para el contenedor de añadir tareas */
+      #contenedorAñadirTareas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+      }
+
+      #contenedorAñadirTareas input {
+        padding: 10px;
+        width: 70%;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        background-color: #444;
+        color: #eee;
+        margin-right: 10px;
+        box-sizing: border-box;
+      }
+
+      #contenedorAñadirTareas button {
+        padding: 10px 16px;
+        background-color: #6200ee;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #contenedorAñadirTareas button:hover {
+        background-color: #3700b3;
+      }
+
+      /* Estilo para el contenedor de tareas */
+      #contenedorTareas {
+        padding: 10px;
+        background-color: #222;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+        box-sizing: border-box;
+      }
+
+      /* Estilo de la lista de tareas */
+      #listaTareas {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Estilo de cada tarea */
+      #listaTareas li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #444;
+        border-radius: 4px;
+        color: #eee;
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Contenedor de texto para cada tarea */
+      .textoTarea {
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .textoTarea.completada {
+        text-decoration: line-through;
+        color: #888;
+      }
+
+      /* Contenedor de botones para cada tarea */
+      .botonesTarea {
+        display: flex;
+        align-items: center;
+      }
+
+      #listaTareas li button {
+        margin-left: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      /* Botones con estilo */
+      .botonCompletar {
+        background-color: #03dac6;
+        color: #222;
+      }
+
+      .botonCompletar:hover {
+        background-color: #018786;
+      }
+
+      .botonEliminar {
+        background-color: #cf6679;
+        color: #222;
+      }
+
+      .botonEliminar:hover {
+        background-color: #b00020;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <h1>TAREAS</h1>
+    <div id="contenedorAñadirTareas">
+      <input type="text" id="nuevaTarea" placeholder="Nueva tarea"/>
+      <button id="agregar">Agregar Tarea</button>
+    </div>
+    <div id="contenedorTareas">
+      <ul id="listaTareas"></ul>
+    </div>
+    <script src="actividad3RA1.js"></script>
+  </body>
+</html>
